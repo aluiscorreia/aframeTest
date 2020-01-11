@@ -3,6 +3,8 @@
 <head>
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+
 </head>
 
 <body>
@@ -15,11 +17,15 @@
     <a-assets>
       <a-asset-item id="tree" src="/assets/tp.gltf"></a-asset-item>
     </a-assets>
+    <a-sphere dynamic-body position="0 1 -20" radius="0.3" color="#FFF"></a-sphere>
+    <a-marker preset="hiro">
+      <a-gltf-model id="hiro" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
+    </a-marker>
+    <a-marker preset="kanji">
+      <a-gltf-model id="ka" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
+    </a-marker>
+    <a-plane static-body></a-plane>
     <a-entity camera look-controls position="0 0 0"></a-entity>
-    <a-sphere position="0 1 -8" radius="0.3" color="#FFF"></a-sphere>
-    <a-marker-camera preset="hiro">
-      <a-gltf-model position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
-    </a-marker-camera>
   </a-scene>
 </body>
 
