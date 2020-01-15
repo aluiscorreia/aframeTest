@@ -10,24 +10,24 @@
   <a-scene embedded arjs>
     <a-assets>
       <a-asset-item id="myAsset" src="/assets/tp.gltf"></a-asset-item>
+      <img id="transparent" src="/assets/transparent.png">
     </a-assets>
+    <a-text value="ABC" position="-2 2 -4"></a-text>
     <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-sky color="#ECECEC"></a-sky> -->
     <a-sphere dynamic-body position="0 1 -10" radius="0.3" color="#FFF"></a-sphere>
-    <a-plane static-body height ="5" width="20" position="0 0 -10" rotation="-90 0 0" color="#FFF"></a-plane>
+    <a-plane static-body src="#transparent" height="10" width="10" position="0 -2 -10" rotation="-90 0 0" color="#FFF"></a-plane>
+    <a-plane static-body src="#transparent" height="10" width="10" position="0 -2 -15" rotation="0 0 0" color="#FFF"></a-plane>
+    <a-plane static-body src="#transparent" height="10" width="10" position="-5 -2 -10" rotation="0 90 0" color="#FFF"></a-plane>
+    <a-plane static-body src="#transparent" height="10" width="10" position="5 -2 -10" rotation="0 270 0" color="#FFF"></a-plane>
+    <a-plane static-body src="#transparent" height="10" width="10" position="0 -2 -5" rotation="0 180 0" color="#FFF"></a-plane>
+
     <a-marker preset="hiro">
-      <a-gltf-model static-body id="hiro" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model >
-      <a-circle  static-body color="transparent" radius="0.8" position="0 1 0" rotation="0 0 0 "></a-circle>
-      
-      <!-- <a-entity id="hiro" gltf-model="#myAsset" body="type: dynamic;" shape__main="shape: cylinder;
-                       height: 0.36;
-                       radiusTop: 0.24;
-                       radiusBottom: 0.24;" shape__handle="shape: box;
-                         halfExtents: 0.15 0.18 0.04;
-                         offset: 0.4 0 0;"> -->
+      <a-gltf-model static-body id="hiro" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
+      <a-circle static-body src="#transparent" radius="0.8" position="0 1 0" rotation="0 0 0 "></a-circle>
       </a-entity>
     </a-marker>
     <a-marker preset="kanji">
