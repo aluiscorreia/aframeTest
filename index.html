@@ -17,10 +17,11 @@
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-sky color="#ECECEC"></a-sky> -->
     <a-sphere dynamic-body position="0 1 -10" radius="0.3" color="#FFF"></a-sphere>
-    <a-plane static-body position="0 0 -10" rotation="-90 0 0" color="#FFF"></a-plane>
+    <a-plane static-body height ="5" width="20" position="0 0 -10" rotation="-90 0 0" color="#FFF"></a-plane>
     <a-marker preset="hiro">
-      <a-sphere  static-body color="transparent" radius="0.8"></a-sphere>
-      <a-gltf-model  id="hiro" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model >
+      <a-gltf-model static-body id="hiro" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model >
+      <a-circle  static-body color="transparent" radius="0.8" position="0 1 0" rotation="0 0 0 "></a-circle>
+      
       <!-- <a-entity id="hiro" gltf-model="#myAsset" body="type: dynamic;" shape__main="shape: cylinder;
                        height: 0.36;
                        radiusTop: 0.24;
