@@ -4,22 +4,30 @@
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
-
 </head>
 
 <body>
   <a-scene embedded arjs>
+    <a-assets>
+      <a-asset-item id="myAsset" src="/assets/tp.gltf"></a-asset-item>
+    </a-assets>
     <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-sky color="#ECECEC"></a-sky> -->
-    <a-assets>
-      <a-asset-item id="tree" src="/assets/tp.gltf"></a-asset-item>
-    </a-assets>
-    <a-sphere dynamic-body position="0 1 -20" radius="0.3" color="#FFF"></a-sphere>
+    <a-sphere dynamic-body position="0 1 -10" radius="0.3" color="#FFF"></a-sphere>
+    <a-plane static-body position="0 0 -10" rotation="-90 0 0" color="#FFF"></a-plane>
     <a-marker preset="hiro">
-      <a-gltf-model id="hiro" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
+      <a-sphere  static-body color="transparent" radius="0.8"></a-sphere>
+      <a-gltf-model  id="hiro" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model >
+      <!-- <a-entity id="hiro" gltf-model="#myAsset" body="type: dynamic;" shape__main="shape: cylinder;
+                       height: 0.36;
+                       radiusTop: 0.24;
+                       radiusBottom: 0.24;" shape__handle="shape: box;
+                         halfExtents: 0.15 0.18 0.04;
+                         offset: 0.4 0 0;"> -->
+      </a-entity>
     </a-marker>
     <a-marker preset="kanji">
       <a-gltf-model id="ka" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
@@ -27,6 +35,17 @@
     <a-plane static-body></a-plane>
     <a-entity camera look-controls position="0 0 0"></a-entity>
   </a-scene>
+  <!-- <script>
+    // var playerEl = document.getElementById("hiro");
+    // playerEl.addEventListener('collide', function (e) {
+    //   console.log('Player has collided with body #' + e.detail.body.id);
+
+    //   e.detail.target.el;  // Original entity (playerEl).
+    //   e.detail.body.el;    // Other entity, which playerEl touched.
+    //   e.detail.contact;    // Stats about the collision (CANNON.ContactEquation).
+    //   e.detail.contact.ni; // Normal (direction) of the collision (CANNON.Vec3).
+    // });
+  </script> -->
 </body>
 
 </html>
