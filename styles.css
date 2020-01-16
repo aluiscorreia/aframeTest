@@ -1,0 +1,29 @@
+body {
+    /* transform: rotateY(180deg); */
+    overflow: hidden;
+}
+
+.scoreDiv {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+#leftScore {
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#rigthScore {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
