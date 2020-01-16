@@ -13,11 +13,11 @@
       <a-asset-item id="myAsset" src="/assets/tp.gltf"></a-asset-item>
       <img id="transparent" src="/assets/transparent.png">
     </a-assets>
-    <a-sphere dynamic-body id="bola" position="0 1 -8" radius="0.3" color="#FFF"></a-sphere>
+    <a-sphere dynamic-body id="bola" position="0 0 -7" radius="0.3" color="#FFF"></a-sphere>
     <a-plane static-body id="plane1" src="#transparent" height="10" width="10" position="0 -2 -10" rotation="-90 0 0"
       color="#FFF">
     </a-plane>
-    <a-plane static-body id="plane2" src="#transparent" height="10" width="10" position="0 -2 -15" rotation="0 0 0"
+    <a-plane static-body id="plane2" src="#transparent" height="10" width="10" position="0 -2 -11" rotation="0 0 0"
       color="#FFF">
     </a-plane>
     <a-plane static-body id="plane3" src="#transparent" height="10" width="10" position="-5 -2 -10" rotation="0 90 0"
@@ -32,13 +32,17 @@
 
     <a-marker preset="hiro">
       <a-gltf-model static-body id="hiro" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
-      <a-circle static-body id="hiroCircle" src="#transparent" radius="0.8" position="0 1 0" rotation="0 0 0 ">
+      <a-circle static-body src="#transparent" radius="0.8" position="0 1 0" rotation="0 0 0 ">
+      </a-circle>
+      <a-circle static-body src="#transparent" radius="0.8" position="0 1 0" rotation="0 180 0 ">
       </a-circle>
       </a-entity>
     </a-marker>
     <a-marker preset="kanji">
       <a-gltf-model static-body id="kanji" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
-      <a-circle static-body id="kanjiCircle" src="#transparent" radius="0.8" position="0 1 0" rotation="0 0 0 ">
+      <a-circle static-body src="#transparent" radius="0.8" position="0 1 0" rotation="0 0 0 ">
+      </a-circle>
+      <a-circle static-body src="#transparent" radius="0.8" position="0 1 0" rotation="0 180 0 ">
       </a-circle>
     </a-marker>
     <a-entity camera look-controls="reverseMouseDrag: true" position="0 0 0" rotation="0 0 0"></a-entity>
@@ -54,17 +58,18 @@
     var playerEl = document.getElementById("bola");
 
     playerEl.addEventListener('collide', function (e) {
+      console.log(e.detail.body.el.id)
       if (e.detail.body.el.id === "plane4") {
         player1++;
         playerEl.body.velocity.set(0, 0, 0);
         playerEl.body.angularVelocity.set(0, 0, 0);
-        playerEl.body.position.set(0, 1, -10);
+        playerEl.body.position.set(0, 0, -7);
       }
       if (e.detail.body.el.id === "plane3") {
         player2++;
         playerEl.body.velocity.set(0, 0, 0);
         playerEl.body.angularVelocity.set(0, 0, 0);
-        playerEl.body.position.set(0, 1, -10);
+        playerEl.body.position.set(0, 0, -7);
       }
       document.getElementById("leftScore").innerText = "Pontos: " + player1
       document.getElementById("rigthScore").innerText = "Pontos: " + player2
