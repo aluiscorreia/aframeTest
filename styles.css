@@ -8,6 +8,9 @@ body {
     top: 0;
     z-index: 100;
     width: 100%;
+  
+
+
 }
 
 #leftScore {
@@ -17,6 +20,12 @@ body {
     font-size: 30px;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border:3px  solid rgb(218, 189, 25);
+    border-radius: 10px;
+    background-color:black ;
+    opacity: 0.5;
+    padding:5px;
+
 }
 
 #rigthScore {
@@ -26,4 +35,10 @@ body {
     font-size: 30px;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border:3px  solid rgb(5, 40, 134);
+    border-radius: 10px;
+    background-color:black ;
+    opacity: 0.5;
+    padding:5px;
+
 }
