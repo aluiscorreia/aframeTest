@@ -12,8 +12,19 @@
     <a-assets>
       <a-asset-item id="myAsset" src="/assets/tp.gltf"></a-asset-item>
       <img id="transparent" src="/assets/transparent.png">
+<<<<<<< HEAD
     </a-assets>
     <a-sphere dynamic-body id="bola" position="0 0 -7" radius="0.3" color="#FFF"></a-sphere>
+=======
+      <a-mixin id="light"
+                 geometry="primitive: sphere; radius: 1.5"
+                 material="color: #FFF; shader: flat"
+                 light="color: #fff; distance: 200; intensity: 3; type: point"></a-mixin>
+    </a-assets> 
+   
+    
+     <a-sphere mixin="light" dynamic-body id="bola" position="0 1 -8" radius="0.3" color="#FFF"></a-sphere>
+>>>>>>> f87ad0fe2577e8ebac10b25c3b973cf735c3f63c
     <a-plane static-body id="plane1" src="#transparent" height="10" width="10" position="0 -2 -10" rotation="-90 0 0"
       color="#FFF">
     </a-plane>
@@ -36,7 +47,7 @@
       </a-circle>
       <a-circle static-body src="#transparent" radius="0.8" position="0 1 0" rotation="0 180 0 ">
       </a-circle>
-      </a-entity>
+      
     </a-marker>
     <a-marker preset="kanji">
       <a-gltf-model static-body id="kanji" position="0 0 0" scale="0.5 0.5 0.5" src="/assets/tp.gltf"></a-gltf-model>
